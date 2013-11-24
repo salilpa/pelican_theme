@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 {% block title %}{{ article.title|striptags }}{% endblock %}
+{% block head %}
+{% if article.author_gplusid %}
+  <link rel="author" href="https://plus.google.com/u/0/{{ article.author_gplusid }}?rel=author">
+{% endif %}
+{% endblock %}
 {% block content %}
 <section id="content" class="body">
   <article>
