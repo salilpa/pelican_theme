@@ -10,6 +10,8 @@
         {% if FEED_ALL_RSS %}
         <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
         {% endif %}
+{% block head %}
+{% endblock %}
 
         <!--[if IE]>
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -79,5 +81,6 @@
 {% include 'analytics.html' %}
 {% include 'piwik.html' %}
 {% include 'disqus_script.html' %}
+{% include 'add_this.html' %}
 </body>
 </html>
